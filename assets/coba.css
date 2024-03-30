@@ -1,0 +1,60 @@
+body {
+   font-family: 'Times New Roman', Times, serif;
+   background-color: black;
+}
+
+h1 {
+   text-align: center;
+}
+
+
+div {
+   margin: 20PX auto;
+   max-width: 600px;
+   padding: 20px;
+   background-color: #fff;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+   width: 100%;
+   border-collapse: separate;
+   border-spacing: 0;
+   background-color: #f9f9f9;
+}
+
+th, td {
+   padding: 8px;
+   text-align: left;
+}
+
+.judul-tabel {
+   background-color: #007bff;
+   color: white;
+}
+
+#tengah {
+   text-align: center;
+}
+
+input[type="button"] {
+   padding: 8px 16px;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+}
+
+input[type="button"]:hover {
+   background-color: #0056b3;
+}
+
+#atas {
+   text-align: center;
+}
+
+#bawah {
+   text-align: center;
+}
