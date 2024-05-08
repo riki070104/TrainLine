@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logout-container {
+    text-align: center;
+    margin-top: 100px;
+    color: #fff; 
+}
+
+h2 {
+    color: #fff; 
+}
+
+p {
+    color: #ccc; 
+}
+
+.login-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Warna latar belakang */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-link:hover {
+    background-color: #0056b3; /* Warna latar belakang saat dihover */
+}
+
