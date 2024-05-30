@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kategori</title>
-    <link rel="stylesheet" href="kategori.css">
+    <link rel="stylesheet" href="css/kategori.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -20,8 +28,8 @@
                 <li>Tiket Eksekutif</li>
                 <li>Tiket VIP</li>
             </ul>
-            <a href="trasaction.html" class="view-order-button">Lihat Pesanan</a>
-            <a href="admin.html" class="back-button">Back to Dashboard</a>
+            <a href="trasaction.php" class="view-order-button">Lihat Pesanan</a>
+            <a href="admin.php" class="back-button">Back to Dashboard</a>
         </div>
 </body>
 

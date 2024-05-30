@@ -1,22 +1,13 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: arial, sans-serif;
-}
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('5.jpg');
-    /* Ganti 'nama-file-gambar.jpg' dengan lokasi dan nama file gambar Anda */
     background-size: cover;
     background-position: center;
 }
 
-.booking-container {
+.category-container {
     width: 70%;
     margin: 80px auto;
     background-color: #fff;
@@ -24,56 +15,29 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-left: 280px;
 }
 
-h2 {
+.category-container h2 {
     margin-bottom: 20px;
 }
 
-
-
-form {
-    display: flex;
-    flex-direction: column;
+.category-container ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-label {
-    margin-bottom: 10px;
-    display: inline-block;
-    width: 150px;
-    text-align: left;
-}
-
-input {
+.category-container li {
     padding: 10px;
     margin-bottom: 10px;
+}
+
+.category-container li:hover {
+    background-color: #e6e6e6;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    border: 1px solid #ccc;
-    width: calc(100% - 170px);
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 150px;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.button-group {
-    margin-top: 20px;
-}
-
-.back-button,
-.continue-button {
+.category-container .view-order-button, .back-button {
     display: inline-block;
     text-decoration: none;
     padding: 10px 20px;
@@ -82,15 +46,11 @@ button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
-.back-button:hover,
-.continue-button:hover {
+.category-container .view-order-button:hover, .back-button:hover {
     background-color: #0056b3;
-}
-
-.body {
-    display: flex;
 }
 
 .user-p {
@@ -110,7 +70,6 @@ button:hover {
     padding: 5px 0;
 
 }
-
 
 #navbtn {
     display: inline-block;
@@ -133,4 +92,20 @@ button:hover {
 
 #checkbox:checked~.body .side-bar a span {
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.user-p img {
+		width: 100px;
+		height: 35px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.section-1 h1 {
+		font-size: 40px;
+	}
+	.section-1 p {
+		font-size: 16px;
+	}
 }

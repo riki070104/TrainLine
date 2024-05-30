@@ -1,44 +1,79 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: arial, sans-serif;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('5.jpg');
+    /* Ganti 'nama-file-gambar.jpg' dengan lokasi dan nama file gambar Anda */
     background-size: cover;
     background-position: center;
 }
 
-.category-container {
+.booking-container {
+    display: block;
     width: 70%;
-    margin: 80px auto;
+    margin: 80px auto; /* Mengatur margin atas dan bawah menjadi 80px, dan sisi kanan dan kiri menjadi otomatis (center) */
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-left: 280px;
 }
 
 h2 {
     margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-li {
+label {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+}
+
+input {
     padding: 10px;
     margin-bottom: 10px;
-}
-
-li:hover {
-    background-color: #e6e6e6;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    border: 1px solid #ccc;
+    width: calc(100% - 170px);
 }
 
-.view-order-button, .back-button {
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.back-button,
+.continue-button {
     display: inline-block;
     text-decoration: none;
     padding: 10px 20px;
@@ -47,10 +82,10 @@ li:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px;
 }
 
-.view-order-button:hover, .back-button:hover {
+.back-button:hover,
+.continue-button:hover {
     background-color: #0056b3;
 }
 
@@ -76,6 +111,7 @@ li:hover {
 
 }
 
+
 #navbtn {
     display: inline-block;
     margin-left: 70px;
@@ -97,20 +133,4 @@ li:hover {
 
 #checkbox:checked~.body .side-bar a span {
     display: none;
-}
-
-@media screen and (max-width: 768px) {
-	.user-p img {
-		width: 100px;
-		height: 35px;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	.section-1 h1 {
-		font-size: 40px;
-	}
-	.section-1 p {
-		font-size: 16px;
-	}
 }

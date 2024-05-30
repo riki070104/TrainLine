@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pemesanan</title>
-    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="css/booking.css">
 </head>
 
 <body>
@@ -23,8 +31,8 @@
                 <button type="submit">Pesan</button>
             </form>
             <div class="button-group">
-                <a href="admin.html" class="back-button">Back</a>
-                <a href="kategori.html" class="continue-button">Next</a>
+                <a href="admin.php" class="back-button">Back</a>
+                <a href="kategori.php" class="continue-button">Next</a>
                 <button onclick="window.location.href='#'" class="edit-button">Edit</button>
                 <button onclick="window.location.href='#'" class="add-button">Tambah</button>
             </div>

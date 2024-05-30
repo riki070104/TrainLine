@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Tiket Kereta Api</title>
+    <title>Register - Tiket Kereta Api</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: url('2.jpg') no-repeat center center fixed;
+            background: url('5.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
             display: flex;
@@ -53,21 +53,6 @@
         button:hover {
             background-color: #0056b3;
         }
-
-        .button {
-            display: inline-block;
-            background-color: #0099ff;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-        
-        .button:hover {
-            background-color: #66ccff;
-        }
-                
         .back {
             margin-top: 20px;
             display: inline-block;
@@ -76,7 +61,7 @@
             font-weight: bold;
             margin-right: 10px;
         }
-        .register {
+        .login {
             margin-top: 20px;
             display: inline-block;
             text-decoration: none;
@@ -87,24 +72,15 @@
 </head>
 <body>
     <div class="overlay">
-        <h1>Login</h1>
-        <form id="loginForm">
+        <h1>Register</h1>
+        <form action="submit-register.php" method="post">
             <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
-            <button type="button" onclick="login()">Login</button>
-            <a href="Admin.html" class="button">Dashboard</a>
+            <button type="submit">Register</button>
         </form>
-        <a href="index.html" class="back">Back</a>
-        <a href="register.html" class="register">Register</a>
-    </div>  
-    <script>
-        function login() {
-            var username = document.getElementById("loginForm").elements["username"].value;
-            var password = document.getElementById("loginForm").elements["password"].value;
-
-            
-            alert("Login berhasil! Selamat datang, " + username + "!");
-        }
-    </script>
+        <a href="login.php" class="back">Back</a>
+        <a href="login.php" class="login">Login</a>
+    </div>
 </body>
 </html>

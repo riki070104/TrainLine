@@ -1,9 +1,17 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="css/admin.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -12,35 +20,35 @@
     <div class="body">
         <nav class="side-bar">
             <div class="user-p">
-                <img src="TrainLine.png">
+                <img src="image/TrainLine.png">
             </div>
             <ul>
                 <li>
-                    <a href="Dasboard.html">
+                    <a href="Admin.php">
                         <i class="Dasboard" aria-hidden="true"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="Booking.html">
+                    <a href="Booking.php">
                         <i class="Booking" aria-hidden="true"></i>
                         <span>Booking</span>
                     </a>
                 </li>
                 <li>
-                    <a href="kategori.html">
+                    <a href="kategori.php">
                         <i class="Kategori" aria-hidden="true"></i>
                         <span>Categoris</span>
                     </a>
                 </li>
                 <li>
-                    <a href="trasaction.html">
+                    <a href="trasaction.php">
                         <i class="Trasaction" aria-hidden="true"></i>
                         <span>Transaction</span>
                     </a>
                 </li>
                 <li>
-                    <a href="Logout.html">
+                    <a href="Logout.php">
                         <i class="Logout" aria-hidden="true"></i>
                         <span>Logout</span>
                     </a>

@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: url('3.jpg') no-repeat center center fixed;
+            background: url('image/3.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
             display: flex;
@@ -167,20 +167,20 @@
     <div class="overlay">
         <h1><span class="white-text">TRAINLINE</span></h1>
         <p><span class="white-text">PELAYANAN TIKET KERETA API</span></p>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
+        <a href="login.php">Login</a>
+        <a href="register.php">Register</a>
     </div>
     <div class="slideshow-container">
         <div class="mySlides fade">
-            <img src="slide1.jpg" style="width:100%">
+            <img src="image/slide1.jpg" style="width:100%">
         </div>
     
         <div class="mySlides fade">
-            <img src="slide2.jpg" style="width:100%">
+            <img src="image/slide2.jpg" style="width:100%">
         </div>
     
         <div class="mySlides fade">
-            <img src="slide3.jpg" style="width:100%">
+            <img src="image/slide3.jpg" style="width:100%">
         </div>
     
         <div style="text-align:center">

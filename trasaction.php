@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +13,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riwayat Transaksi Pemesanan Tiket Kereta Api</title>
-    <link rel="stylesheet" href="transaction.css">
+    <link rel="stylesheet" href="css/transaction.css">
     <script>
         function backToDashboard() {
-            window.location.href = "Admin.html";
+            window.location.href = "Admin.php";
         }
     </script>
 </head>
