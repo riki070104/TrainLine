@@ -73,7 +73,7 @@
 <body>
     <div class="overlay">
         <h1>Register</h1>
-        <form action="submit-register.php" method="post">
+        <form action="register.php" method="post">
             <input type="text" name="username" placeholder="Username" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
@@ -82,5 +82,64 @@
         <a href="login.php" class="back">Back</a>
         <a href="login.php" class="login">Login</a>
     </div>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Validasi kolom yang tidak boleh kosong
+    if (!empty($username) && !empty($password) && !empty($email)) {
+        // Hash password sebelum menyimpannya ke database
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        // Lakukan koneksi ke database
+        $servername = "localhost";
+        $db_username = "root";
+        $db_password = ""; 
+        $dbname = "db_trainline";
+
+        $conn = new mysqli($servername, $db_username, $db_password, $dbname);
+
+        // Periksa koneksi database
+        if ($conn->connect_error) {
+            die("Koneksi gagal: " . $conn->connect_error);
+        }
+
+        // Persiapkan statement SQL
+        $stmt = $conn->prepare("INSERT INTO user (username, password, email) VALUES (?, ?, ?)");
+
+        // Periksa apakah statement berhasil dipersiapkan
+        if ($stmt === false) {
+            die("Error prepare: " . $conn->error);
+        }
+
+        // Binding parameter ke statement SQL
+        $bind = $stmt->bind_param("sss", $username, $hashed_password, $email);
+
+        // Periksa apakah binding berhasil
+        if ($bind === false) {
+            die("Error bind_param: " . $stmt->error);
+        }
+
+        // Eksekusi statement SQL
+        $exec = $stmt->execute();
+
+        // Periksa apakah eksekusi berhasil
+        if ($exec) {
+            echo "<script>alert('Welcome to W-Bank, we are happy to be able to help you, your happiness is our responsibility, enjoy our features and if you have any criticism or suggestions please contact us, thank you');</script>";
+        } else {
+            die("Error execute: " . $stmt->error);
+        }
+
+        // Tutup statement dan koneksi database
+        $stmt->close();
+        $conn->close();
+    } else {
+        echo "<p style='color: red;'>Semua kolom harus diisi!</p>";
+    }
+}
+?>
 </body>
 </html>
